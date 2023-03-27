@@ -70,6 +70,7 @@ void _printint(void)
 */
 int _printf(const char *format, ...)
 {
+	/*initialization of variables*/
 	id.i = 0, id.count = 0;
 	if (format == NULL)
 		return (-1);
