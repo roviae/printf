@@ -34,31 +34,3 @@ void _printbin(void)
 	}
 }
 
-/**
- * printunsigned - prints unsigned int
- * Return: void
-*/
-
-void _printunsigned(void)
-{
-	unsigned int num, div, length;
-	
-	num = va_arg(id.args, unsigned int);
-	div = 1;
-	length = 0;
-	/*This loop checks number of digits in that number*/
-	while (num / div > 0)
-	{
-		div = div * 10;
-		length++;
-	}
-	div = div / 10;
-	/*This loop prints the unsigned number*/
-	while (div > 0)
-	{
-		_putchar((num / div) + '0');
-		num = num % div;
-		div = div / 10;
-		id.count++;
-	}
-}
