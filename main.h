@@ -21,7 +21,8 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 void _printint(void);
 void _printchar(void);
-void _printstring(void);
+void _printstr(void);
 void _printbin(void);
+void _printpointer(void);
 
 #endif

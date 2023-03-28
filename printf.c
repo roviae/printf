@@ -92,6 +92,8 @@ int _printf(const char *format, ...)
 				_printint();
 			else if (format[id.i] == 'b')
 				_printbin();
+			else if (format[id.i] == 'p')
+				_printpointer();
 			else if (format[id.i] == '%')
 				_putchar('%');
 			else

@@ -34,3 +34,24 @@ void _printbin(void)
 	}
 }
 
+/**
+ * printpointer - prints the address of a pointer
+ * Return: void
+*/
+
+void _printpointer(void)
+{
+	void *p = va_arg(id.args, void *);
+	int i, digit;
+	char hex_digits[] = "0123456789abcdef";
+	int num_digits = sizeof(unsigned long int) * 2;
+	unsigned long int value = (unsigned long int)p;
+	
+	_putchar('0');
+	_putchar('x');
+	for (i = num_digits - 1; i >= 0; i--)
+	{
+		digit = (value >> (i * 4)) & 0xf;
+		_putchar(hex_digits[digit]);
+	}	
+}
