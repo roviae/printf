@@ -35,6 +35,7 @@ void _printstr(void)
  * printint - prints int
  * Return: void
 */
+
 void _printint(void)
 {
 	int num, div, length;
@@ -45,9 +46,12 @@ void _printint(void)
 	if (num < 0)
 	{
 		_putchar('-');
+		/*TODO: To try and see if removing the line below changes the output*/
 		num = num * -1;
 		id.count++;
 	}
+	/*This loop checks number of digits in that number*/
+	/*TODO: I'll check */
 	while (num / div > 0)
 	{
 		div = div * 10;
@@ -86,6 +90,8 @@ int _printf(const char *format, ...)
 				_printstr();
 			else if (format[id.i] == 'd' || format[id.i] == 'i')
 				_printint();
+			else if (format[id.i] == 'b')
+				_printbin();
 			else if (format[id.i] == '%')
 				_putchar('%');
 			else
