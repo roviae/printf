@@ -22,5 +22,6 @@ int _putchar(char c);
 void _printint(void);
 void _printchar(void);
 void _printstring(void);
+void _printbin(void);
 
 #endif
