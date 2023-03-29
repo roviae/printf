@@ -1,5 +1,15 @@
 #include "main.h"
 
+struct global
+{
+	char *format;
+	int i;
+	int j;
+	int count;
+	va_list args;
+	char *str;
+} id;
+
 /**
  * printbin - unsigned int argument is converted to binary
  * Return: void
